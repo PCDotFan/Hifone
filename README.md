@@ -60,7 +60,7 @@ php artisan hifone:install
 chmod -R 777 storage
 chmod -R 777 bootstrap/cache
 chmod -R 777 public/uploads
-chmod 622 .env
+chmod 777 .env
 ```
 
 If you have problems to open the Page, enter the Following:
