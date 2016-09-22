@@ -23,12 +23,12 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('username')->nullable();
-            $table->string('password');
+            $table->string('username', 64)->nullable();
+            $table->string('password', 64);
             $table->string('salt')->nullable();
-            $table->string('email')->nullable();
-            $table->string('nickname')->nullable();
-            $table->string('remember_token')->nullable();
+            $table->string('email', 64)->nullable();
+            $table->string('nickname', 64)->nullable();
+            $table->string('remember_token', 128)->nullable();
             $table->boolean('is_banned')->default(false);
             $table->string('image_url')->nullable();
             $table->string('avatar_url')->nullable();

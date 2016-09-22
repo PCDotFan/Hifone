@@ -23,8 +23,8 @@ class CreateCreditRulesTable extends Migration
     {
         Schema::create('credit_rules', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->string('slug')->nullable();
+            $table->string('name', 64);
+            $table->string('slug', 128)->nullable();
             $table->integer('frequency')->unsigned()->default(0);
             $table->integer('reward')->default(0);
             $table->timestamps();

@@ -23,7 +23,7 @@ class CreateSectionsTable extends Migration
     {
         Schema::create('sections', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
+            $table->string('name', 64);
             $table->integer('order')->default(0);
             $table->timestamps();
 

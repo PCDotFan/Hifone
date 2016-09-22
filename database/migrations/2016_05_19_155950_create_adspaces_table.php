@@ -23,11 +23,11 @@ class CreateAdspacesTable extends Migration
     {
         Schema::create('adspaces', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
+            $table->string('name', 64);
             $table->integer('adblock_id');
             $table->integer('order')->default(0);
-            $table->string('position');
-            $table->string('route');
+            $table->string('position', 64);
+            $table->string('route', 64);
             $table->timestamps();
 
             $table->unique('position');

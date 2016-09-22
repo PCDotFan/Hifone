@@ -23,8 +23,8 @@ class CreateAdblocksTable extends Migration
     {
         Schema::create('adblocks', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->string('slug');
+            $table->string('name', 64);
+            $table->string('slug', 128);
             $table->timestamps();
 
             $table->unique('slug');

@@ -23,8 +23,8 @@ class CreatePagesTable extends Migration
     {
         Schema::create('pages', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('slug');
-            $table->string('title');
+            $table->string('slug', 128);
+            $table->string('title', 128);
             $table->text('body');
             $table->text('body_original')->nullable();
             $table->softDeletes();

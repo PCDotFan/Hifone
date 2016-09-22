@@ -19,8 +19,8 @@ class CreateIdentitiesTable extends Migration
         // Create table for storing Social sign-in providers
         Schema::create('providers', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->string('slug')->unique();
+            $table->string('name', 64);
+            $table->string('slug', 128)->unique();
             $table->string('icon')->nullable();
             $table->string('description')->nullable();
             $table->timestamps();
